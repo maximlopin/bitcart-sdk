@@ -122,6 +122,7 @@ class RPCProxy:
                     timeout=aiohttp.ClientTimeout(total=5 * 60),
                 ) as response:
                     parsed = parse_json(await response.text())
+                    print(self.url, parsed)
                     if isinstance(parsed, Ok):
                         return parsed.result
                     else:
