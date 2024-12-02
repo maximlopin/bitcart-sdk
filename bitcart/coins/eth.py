@@ -14,7 +14,7 @@ class ETH(BTC):
     is_eth_based = True
 
     async def history(self) -> dict:  # pragma: no cover
-        return await self.server.history()  # type: ignore
+        return { "test": "bitcart S D K" }
 
     async def get_address(self, *args: Any, **kwargs: Any) -> NoReturn:
         raise NotImplementedError(f"Full address history lookup not implemented for {self.coin_name} to remain lightweight")
